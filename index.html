@@ -33,6 +33,11 @@
 			.is-hidden {opacity: .3}
 			.reveal th>small {display: block}
 
+			.reveal .block-grid.large-3 > li {float: left; width: 33%;}
+
+
+
+
 		</style>
 
 		<!-- For syntax highlighting -->
@@ -228,7 +233,7 @@
 						</script>
 					</section>
 					<section>
-						<h2>Do you need more grid feature?</h2>
+						<h2>Do you need more grid features?</h2>
 						<p>may be not may be yes wait for ZURB Foundation :)</p>
 					</section>
 					<section>
@@ -305,38 +310,32 @@
 					</section>
 					<section>
 						<h2>UI and Widgets</h2>
-						<ul>
+						<ul class="block-grid large-3">
 							<li><a href="http://twitter.github.io/bootstrap/components.html#alerts">Alerts</a></li>
-							<li>Badges</li>
-							<li>Breadcrumbs</li>
-							<li>Buttons</li>
-							<li>Carousel</li>
-							<li>Collapse/Accordion</li>
-							<li>Dropdown</li>
-							<li>Forms</li>
-							<li>Grids</li>
-							<li>Icons</li>
-							<li>Labels</li>
-							<li>Lists</li>
-							<li>Lists (horizontal)</li>
-							<li>Modal window</li>
-							<li>Navigation</li>
-							<li>Pagination</li>
-							<li>Panels</li>
-							<li>Popovers</li>
-							<li>Pricing tables</li>
-							<li>Print styles</li>
-							<li>Progress bars</li>
-							<li>Right-to-Left</li>
-							<li>Scrollspy</li>
-							<li>Tables</li>
-							<li>Tabs</li>
-							<li>Thumbnails</li>
-							<li>Tooltips</li>
-							<li>Tour</li>
-							<li>Typeahead</li>
-							<li>Typography</li>
-							<li>Video scaling</li>
+							<li><a href="http://twitter.github.io/bootstrap/components.html#labels-badges">Badges</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/components.html#breadcrumbs">Breadcrumbs</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/base-css.html#buttons">Buttons</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/javascript.html#carousel">Carousel</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/javascript.html#collapse">Accordion</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/javascript.html#dropdowns">Dropdown</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/base-css.html#forms">Forms</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/scaffolding.html#gridSystem">Grids</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/base-css.html#icons">Icons</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/components.html#labels-badges">Labels</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/base-css.html#typography">Lists</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/javascript.html#modals">Modal window</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/components.html#navbar">Navigation</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/components.html#pagination">Pagination</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/components.html#misc">Panels</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/javascript.html#popovers">Popovers</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/components.html#progress">Progress bars</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/javascript.html#scrollspy">Scrollspy</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/base-css.html#tables">Tables</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/javascript.html#tabs">Tabs</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/components.html#thumbnails">Thumbnails</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/javascript.html#tooltips">Tooltips</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/javascript.html#typeahead">Typeahead</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/base-css.html#typography">Typography</a></li>
 						</ul>
 					</section>
 					<section>
@@ -345,7 +344,6 @@
 						<p>Bootstrap is a full featured solution for making a responsive website. Out of the box, styling is minimal but elegant for making prototypes.</p>
 						<p>The default bootstrap UI can be modified by using LESS. The process of setting up LESS with Bootstrap is vague in documentation and took sometime to figure out.</p>
 						<p>The component and plugin library is large enough and community support continues to grow. Overall, Bootstrap is a great framework to streamline the process of development.</p>
-						<p><small><a href="http://responsive.vermilion.com/compare.php">Source</a></small></p>
 					</section>
 				</section>
 
@@ -387,6 +385,167 @@
 									 <li>Surface</li>
 								</ul>
 							</li>
+						</ul>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Row syntax
+							more semanitc then bootstrap
+							```html
+								<div class="row">
+									<div class="large-6 columns">...</div>
+									<div class="large-6 columns">...</div>
+								</div>
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Nested column syntax
+							![Alt Nested column syntax](./images/foundation/grid-nesting.png)
+							```html
+							<div class="row">
+								<div class="large-8 columns">
+									8
+									<div class="row">
+										<div class="large-8 columns">
+											8 Nested
+											<!-- nested columns add up to 12 -->
+											<div class="row">
+												<div class="large-8 columns">8 Nested Again</div>
+												<div class="large-4 columns">4</div>
+											</div>
+										</div>
+										<div class="large-4 columns">4</div>
+									</div>
+								</div>
+								<div class="large-4 columns">4</div>
+							</div>
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Offset column syntax
+							![Alt Offset column syntax](./images/foundation/grid-offset.png)
+							```html
+							<div class="row">
+								<div class="large-1 columns">1</div>
+								<div class="large-10 large-offset-1 columns">10, offset 1</div>
+							</div>
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							# More grid features
+							## Mobile grid syntax small-X
+							first row on small second on big device
+							![Alt Mobile column syntax](./images/foundation/grid-mobile.png)
+							```html
+							<!-- 12 colums small grid -->
+							<div class="row">
+								<div class="small-4 large-2 columns">small-4, large-2</div>
+								<div class="small-8 large-10 columns">small-8, large-10, last</div>
+							</div>
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Gutter-free row syntax
+							![Alt Gutter free column syntax](./images/foundation/grid-row-collapse.png)
+							```html
+							<div class="row collapse">
+								<label>Input Label</label>
+								<div class="large-9 columns">
+									<input type="text" placeholder="large-9.columns"></div>
+								<div class="large-3 columns">
+									<span class="postfix">.com</span>
+								</div>
+							</div>
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Centered syntax
+							![Alt Centered column syntax](./images/foundation/grid-row-centered.png)
+							```html
+							<!-- You can control centering just for small or large or both-->
+							<div class="row">
+								<div class="small-9 small-centered large-uncentered columns">9 centered</div>
+							</div>
+							<div class="row">
+								<div class="small-11 small-centered columns">11 centered</div>
+							</div>
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							##  Ordering syntax
+							![Alt Ordering column syntax](./images/foundation/grid-ordering.png)
+							```html
+							<!-- You can control centering just for small or large or both-->
+							<div class="row">
+								<div class="small-2 push-10 columns">2</div>
+								<div class="small-10 pull-2 columns">10, last</div>
+							</div>
+							<div class="row">
+								<div class="small-3 push-9 columns">3</div>
+								<div class="small-9 pull-3 columns">9, last</div>
+							</div>
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							##  Block Grid syntax
+							![Alt Ordering column syntax](./images/foundation/block-grid.png)
+							```html
+							<!-- Using both block grids together for different layouts -->
+							<ul class="small-block-grid-2 large-block-grid-4">
+								<li><img src="../img/demos/demo1.png"></li>
+								<li><img src="../img/demos/demo2.png"></li>
+								<li><img src="../img/demos/demo3.png"></li>
+								<li><img src="../img/demos/demo4.png"></li>
+							</ul>
+							```
+						</script>
+					</section>
+					<section>
+						<h2>UI and Widgets</h2>
+						<ul class="block-grid large-3">
+							<li><a href="http://foundation.zurb.com/docs/components/alert-boxes.html">Alerts</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/labels.html">Badges</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/breadcrumbs.html">Breadcrumbs</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/buttons.html">Buttons</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/orbit.html">Carousel</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/section.html">Accordion</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/dropdown.html">Dropdown</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/forms.html">Forms</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/grid.html">Grids</a></li>
+							<li><a href="http://foundation.zurb.com/icon-fonts.php">Icons</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/labels.html">Labels</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/type.html">Lists</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/block-grid.html">Lists (horizontal)</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/reveal.html">Modal window</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/top-bar.html">Navigation</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/pagination.html">Pagination</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/panels.html">Panels</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/tooltips.html">Popovers</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/pricing-tables.html">Pricing tables</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/progress-bars.html">Progress bars</a></li>
+							<li><a href="http://foundation.zurb.com/docs/rtl.html">Right-to-Left</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/magellan.html">Scrollspy</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/tables.html">Tables</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/section.html">Tabs</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/thumbnails.html">Thumbnails</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/tooltips.html">Tooltips</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/joyride.html">Tour</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/type.html">Typography</a></li>
+							<li><a href="http://foundation.zurb.com/docs/components/flex-video.html">Video scaling</a></li>
 						</ul>
 					</section>
 					<section>
