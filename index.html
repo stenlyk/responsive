@@ -661,10 +661,108 @@
 				</section>
 
 				<section>
-					<h1>Building first project with ZURB Foundation</h1>
+					<section>
+						<h1>Building first project with ZURB Foundation</h1>
+					</section>
+					<section>
+						<h2>What we need?</h2>
+						<ul>
+							<li>Ruby <a href="http://rubyinstaller.org/">windows</a>, <a href="http://net.tutsplus.com/tutorials/ruby/how-to-install-ruby-on-a-mac/">mac</a>, <a href="http://ruby.about.com/od/tutorials/ht/installrubylin.htm">linux</a></li>
+							<li>
+								Now we need Sass and Compass for basic purpose just run in terminal or command prompt
+								<ul>
+									<li>gem install sass</li>
+									<li>gem install compass</li>
+								</ul>
+							</li>
+							<li>But if you want more then just compile your sass files to css follow the next slide with little bit complicated setup</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Install beta version of sass</h2>
+						<p>Beta version allow generate source map of css file. This file help you with location the rules in sccs files.</p>
+						<img src="./images/web-inspektor.png" alt="web inspektor">
+					</section>
+					<section data-markdown>
+						## INSTALL BETA VERSION OF SASS
+						If you need compass and sass this versions works do not install the latest version.
+						```ruby
+						gem install compass
+						gem install --version '= 3.3.0.alpha.149' sass
+						```
+					</section>
+					<section data-markdown>
+						## Lets install Zurb Foundation
+						Zurb foundation is gem so run in terminal or command prompt
+						```ruby
+						gem install zurb-foundation
+						```
+						### First project
+						cd to projects directory
+						```ruby
+						compass create your-project-name -r zurb-foundation --using foundation
+						```
+						[install doc](http://foundation.zurb.com/docs/sass.html)
+					</section>
+					<section data-markdown>
+						## We get project prepared
+						for compiling scss to css just run in project directory where is config.rb located
+						```ruby
+						compass watch
+						```
+						### Or if you want generate sourcemap file
+						cd to projects directory
+						```ruby
+						sass --compass --sourcemap --watch sass:stylesheets
+						```
+						uff wtf? run sass with compass and sourcemap extension and watch changes in sass dir and convert css to styleshets dir
+					</section>
+					<section>
+						<h2>Setup chrome canary</h2>
+						<ul>
+							<li>run chrome://flags</li>
+							<li>“Developer Tools Experiments” - enable</li>
+							<li>Open developer tools setting</li>
+							<li>In Experiments enabled Sass stylesheet debuging</li>
+							<li>Create workspace and map scss file to local resource</li>
+						</ul>
+						<p>More info <a href="https://medium.com/what-i-learned-building/b4daab987fb0">here</a></p>
+					</section>
 				</section>
 				<section>
-					<h1>THE END</h1>
+					<section>
+						<h2>Recommendation to follow</h2>
+						<ul>
+							<li><a href="http://www.paulirish.com/">Paul Irish</a></li>
+							<li><a href="https://twitter.com/addyosmani">Addy Osmani</a></li>
+							<li><a href="https://twitter.com/chriscoyier">Chris Coyier</a></li>
+							<li><a href="http://foundation.zurb.com/">Zurb Foundation</a></li>
+							<li><a href="https://twitter.com/h5bp">HTML5 Boilerplate</a></li>
+							<li><a href="http://www.html5rocks.com/en/">html5rocks</a></li>
+						</ul>
+					</section>
+					<section>
+						<h1>Questions?</h1>
+					</section>
+					<section>
+						<h1>THE END</h1>
+						<h2>Thank you for listening me and sorry for my English :)</h2>
+						<a href="http://stenlyk.github.io/responsive/">Online version of this presentation http://stenlyk.github.io/responsive/</a>
+					</section>
+					<section>
+						<h2>Resources</h2>
+						<ul>
+							<li><a href="http://responsive.vermilion.com/compare.php">http://responsive.vermilion.com/compare.php</a></li>
+							<li><a href="http://foundation.zurb.com/">http://foundation.zurb.com/</a></li>
+							<li><a href="http://twitter.github.io/bootstrap/">http://twitter.github.io/bootstrap/</a></li>
+							<li><a href="https://medium.com/what-i-learned-building/b4daab987fb0">https://medium.com/what-i-learned-building/b4daab987fb0</a></li>
+							<li><a href="http://css-tricks.com/">http://css-tricks.com/</a></li>
+							<li><a href="http://www.paulirish.com/">http://www.paulirish.com/</a></li>
+							<li><a href="http://en.wikipedia.org/wiki/Responsive_web_design">http://en.wikipedia.org/wiki/Responsive_web_design</a></li>
+							<li><a href="http://www.youtube.com/watch?v=FlW2vvl0yvo">http://www.youtube.com/watch?v=FlW2vvl0yvo</a></li>
+							<li><a href="http://compass-style.org/">http://compass-style.org/</a></li>
+						</ul>
+					</section>
 				</section>
 
 			</div>
